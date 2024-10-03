@@ -2,16 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "Flask/app.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "Flask/app.py"
     }
-  ]
+  ],
   "env": {
     "PYTHON_VERSION": "3.10"  // or "3.11"
   }
