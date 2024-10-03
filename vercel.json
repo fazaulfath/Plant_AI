@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "build": [
+  "builds": [
     {
       "src": "Flask/app.py",
       "use": "@vercel/python"
