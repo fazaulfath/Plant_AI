@@ -117,7 +117,6 @@ pandocfilters==1.5.1
 parsel==1.9.1
 parso==0.8.4
 patsy==0.5.6
-pgmpy==0.1.25
 pillow==10.3.0
 platformdirs==4.2.2
 prometheus_client==0.20.0
@@ -185,9 +184,10 @@ tldextract==5.1.2
 tokenizers==0.19.1
 toml==0.10.2
 toolz==0.12.1
-torch==2.3.1
-torchaudio==2.3.1
-torchvision==0.16.1
+torch>=2.1.1
+torchvision>=0.16.1
+torchaudio>=2.1.1
+pgmpy>=0.1.25
 tornado==6.3.2
 tqdm==4.66.1
 traitlets>=5.9.0
