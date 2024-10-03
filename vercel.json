@@ -12,4 +12,7 @@
       "dest": "app.py"
     }
   ]
+  "env": {
+    "PYTHON_VERSION": "3.10"  // or "3.11"
+  }
 }
