@@ -19,15 +19,18 @@ def predict():
             
             img = file.read()
             prediction = predict_image(img)
-            print(prediction)
+            if prediction not in utils.disease_dic:
+                return render_template('index.html', status=400, res="Prediction not found.")
+            
             res = Markup(utils.disease_dic[prediction])
             return render_template('display.html', status=200, result=res)
         
         except Exception as e:
-            print(f"Error during prediction: {e}")  # Log the error
-            return render_template('index.html', status=500, res="Internal Server Error")
+            print(f"Error during prediction: {e}")
+            return render_template('index.html', status=500, res=f"Internal Server Error: {e}")
     
     return render_template('index.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
